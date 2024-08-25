@@ -131,6 +131,7 @@ export type RegisteredEvent = TypedEvent<
 export type RegisteredEventFilter = TypedEventFilter<RegisteredEvent>;
 
 export interface CrossChainNameServiceLookup extends BaseContract {
+  target(sourceRouter_: string, target: any): unknown;
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
